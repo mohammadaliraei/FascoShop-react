@@ -8,11 +8,11 @@ const UserModel = require("./src/models/users");
 
 const cors = require("cors");
 // Allow all origins
-app.use(cors());
+// app.use(cors());
 // Allow specific origin(s)
 app.use(
   cors({
-    origin: "https://fasco-shop-react-frontend.vercel.app",
+    origin: ["https://fasco-shop-react-frontend.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
