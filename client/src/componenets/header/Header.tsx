@@ -8,7 +8,7 @@ import HeaderNavMob from "./HeaderNavMob";
 
 const Header: React.FC = () => {
   return (
-    <div className="flex flex-col  items-center w-full">
+    <div className="flex flex-col  items-center w-full  ">
       <div className="flex flex-col  ">
         <div className="md:flex hidden justify-between flex-row gap-12 py-7 ">
           <div className="md:flex hidden">
@@ -24,10 +24,10 @@ const Header: React.FC = () => {
             <HeaderLogo />
           </div>
         </div>
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           <HeaderNavMob />
         </div>
-        <HeaderProduct />
+        <HeaderProduct /> */}
       </div>
     </div>
   );

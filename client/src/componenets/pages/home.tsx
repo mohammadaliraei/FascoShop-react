@@ -8,10 +8,16 @@ import Gallery from "../gallery/Gallery";
 import Testimonials from "../testimonials/Testimonials";
 import Subscribe from "../subscribe/Subscribe";
 import Footer from "../footer/Footer";
+import HeaderNavMob from "../header/HeaderNavMob";
+import HeaderProduct from "../header/HeaderProduct";
 const home: React.FC = () => {
   return (
-    <div className="flex flex-col gap-6 w-full">
+    <div className="flex flex-col gap-6 w-full ">
       <Header />
+      <div className="md:hidden">
+        <HeaderNavMob />
+      </div>
+      <HeaderProduct />
       <Logo />
       <DealOfTheMonth />
       <NewArrivals />

@@ -2,13 +2,14 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { images } from "../../Features/images";
+import { Link } from "react-router-dom";
 
 const HeaderNav: React.FC = () => {
   const links = [
     { name: "Home", link: "/" },
-    { name: "Shop", link: "/" },
-    { name: "Products", link: "/" },
-    { name: "About", link: "/" }, // Fixed typo in "About"
+    { name: "Shop", link: "/shop" },
+    { name: "Product", link: "/product" },
+    { name: "About", link: "/about" }, // Fixed typo in "About"
   ];
 
   return (
@@ -22,7 +23,9 @@ const HeaderNav: React.FC = () => {
       <div className="md:flex hidden gap-16">
         {links.map((link, index) => (
           <button key={index}>
-            <p>{link.name}</p>
+            <Link to={`${link.link}`}>
+              <p>{link.name}</p>
+            </Link>
           </button>
         ))}
       </div>
