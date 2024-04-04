@@ -3,8 +3,6 @@ import { images } from "../../Features/images";
 
 import HeaderLogo from "./HeaderLogo";
 import HeaderNav from "./HeaderNav";
-import HeaderProduct from "./HeaderProduct";
-import HeaderNavMob from "./HeaderNavMob";
 
 const Header: React.FC = () => {
   return (
