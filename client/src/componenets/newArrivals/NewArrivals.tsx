@@ -26,7 +26,9 @@ const NewArrivals: React.FC = () => {
 
   async function getProducts(apiName: any) {
     try {
-      const res = await axios.get(`http://localhost:3000/${apiName}`);
+      const res = await axios.get(
+        `https://fasco-shop-react-api.vercel.app/${apiName}`
+      );
       if (res.status === 200) {
         setProducts(res.data);
       }

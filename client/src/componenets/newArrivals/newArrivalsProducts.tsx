@@ -10,7 +10,9 @@ const NewArrivalsProducts = () => {
 
   async function getProducts() {
     try {
-      const res = await axios.get("http://localhost:3000/products");
+      const res = await axios.get(
+        "https://fasco-shop-react-api.vercel.app/products"
+      );
       if (res.status === 200) {
         setProducts(res.data);
       } else {
