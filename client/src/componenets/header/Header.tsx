@@ -6,19 +6,19 @@ import HeaderNav from "./HeaderNav";
 
 const Header: React.FC = () => {
   return (
-    <div className="flex flex-col  items-center w-full  ">
-      <div className="flex flex-col  ">
-        <div className="md:flex hidden justify-between flex-row gap-12 py-7 ">
-          <div className="md:flex hidden">
+    <div className="flex flex-col   items-center w-full   ">
+      <div className="flex flex-col  w-full">
+        <div className="md:flex hidden w-full flex-row  py-7 ">
+          <div className="md:flex hidden w-[20%] pl-6">
             <img
               src={images.logo}
               className=" w-28"
             />
           </div>
-          <div>
+          <div className="flex justify-center w-[60%]">
             <HeaderNav />
           </div>
-          <div>
+          <div className="flex w-[20%]">
             <HeaderLogo />
           </div>
         </div>

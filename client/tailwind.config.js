@@ -7,6 +7,10 @@ module.exports = withMT({
     "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   theme: {
+    colors: {
+      PurpleBtn: "#9333ea",
+      PinkBtn: "#be185d",
+    },
     extend: {},
   },
   plugins: [require("flowbite/plugin")],

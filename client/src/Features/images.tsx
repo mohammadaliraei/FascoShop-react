@@ -18,8 +18,10 @@ import WarranyProtection from "../assets/images/WarranyProtection.svg";
 import HighQuality from "../assets/images/HighQuality.svg";
 import manFooter from "../assets/images/man-Footer.svg";
 import womanFooter from "../assets/images/woman-footer.svg";
+import manFashionSignIn from "../assets/images/man-fashion-sign-in.jpg";
 
 export const images = {
+  manSignIn: manFashionSignIn,
   manFooter: manFooter,
   womanFooter: womanFooter,
   freeShiping: freeShiping,

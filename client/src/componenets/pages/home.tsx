@@ -12,7 +12,7 @@ import HeaderNavMob from "../header/HeaderNavMob";
 import HeaderProduct from "../header/HeaderProduct";
 const home: React.FC = () => {
   return (
-    <div className="flex flex-col gap-6 w-full ">
+    <div className="flex flex-col gap-6 w-full">
       <Header />
       <div className="md:hidden">
         <HeaderNavMob />

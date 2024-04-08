@@ -5,6 +5,7 @@ const app = express();
 const ProductsModel = require("./src/models/products");
 const UsersModel = require("./src/models/users");
 const UserModel = require("./src/models/users");
+const FashionModel = require("./src/models/fashion");
 
 const cors = require("cors");
 
@@ -25,6 +26,12 @@ mongoose
   .connect(url)
   .then(() => console.log("connected to mongodb"))
   .catch(() => console.log("disconnected tom mongodb"));
+
+app.post("/create-fashion", (req, res) => {
+  FashionModel.create(req.body)
+    .then((fashion) => res.json(fashion))
+    .catch((err) => res.json(err));
+});
 
 app.post("/create-products", (req, res) => {
   ProductsModel.create(req.body)

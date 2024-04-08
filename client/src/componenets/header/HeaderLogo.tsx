@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeaderLogo: React.FC = () => {
   return (
@@ -17,12 +18,12 @@ const HeaderLogo: React.FC = () => {
             className=" w-4 h-4"
           />
         </button>
-        <button>
+        <Link to={"/signin"}>
           <FontAwesomeIcon
             icon={faUser}
             className=" w-4 h-4"
           />
-        </button>
+        </Link>
         <button>
           <FontAwesomeIcon
             icon={faStar}
