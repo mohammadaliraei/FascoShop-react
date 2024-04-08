@@ -5,13 +5,13 @@ import axios from "axios";
 const Dashboard: React.FC = () => {
   const dataDashboard = [
     { name: "size", values: ["-", "S", "M", "L", "XL"] },
-    { name: "colors", values: ["-", "red", "blue", "green", "yellow"] },
+    { name: "color", values: ["-", "red", "blue", "green", "yellow"] },
     {
-      name: "prices",
+      name: "price",
       values: ["-", "0-50", "50-150", "100-150", "150-200", "300-400"],
     },
     {
-      name: "brands",
+      name: "brand",
       values: [
         "-",
         "minimog",
@@ -39,13 +39,10 @@ const Dashboard: React.FC = () => {
 
   const postFashion = () => {
     axios
-      .post(
-        "https://fasco-shop-react-api.vercel.app/dashboard/create-fashion",
-        {
-          imgUrl,
-          size: selectedValues["size"],
-        }
-      )
+      .post("https://fasco-shop-react-api.vercel.app/create-fashion", {
+        imgUrl,
+        ...selectedValues,
+      })
       .then((response) => {
         console.log(response);
         alert("Save is successful");
@@ -63,7 +60,6 @@ const Dashboard: React.FC = () => {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    console.log(selectedValues.size);
     postFashion();
   };
 

@@ -33,6 +33,12 @@ app.post("/create-fashion", (req, res) => {
     .catch((err) => res.json(err));
 });
 
+app.get("/fashion", (req, res) => {
+  FashionModel.find()
+    .then((fashion) => res.json(fashion))
+    .catch((err) => res.json(err));
+});
+
 app.post("/create-products", (req, res) => {
   ProductsModel.create(req.body)
     .then((products) => res.json(products))
